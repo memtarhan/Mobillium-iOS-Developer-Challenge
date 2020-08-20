@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		56E2A6AD40220903AF1AC583 /* Pods_Mobillium_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */; };
 		DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056A24EEFE2C001B8092 /* AppDelegate.swift */; };
-		DB39056F24EEFE2C001B8092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056E24EEFE2C001B8092 /* ViewController.swift */; };
 		DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB39057324EEFE2E001B8092 /* Assets.xcassets */; };
 		DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */; };
 		DB39058224EEFE2E001B8092 /* Mobillium_MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39058124EEFE2E001B8092 /* Mobillium_MovieTests.swift */; };
 		DB39058D24EEFE2E001B8092 /* Mobillium_MovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39058C24EEFE2E001B8092 /* Mobillium_MovieUITests.swift */; };
+		DB3905A324EF00C0001B8092 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059C24EF00C0001B8092 /* SearchPresenter.swift */; };
+		DB3905A424EF00C0001B8092 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059D24EF00C0001B8092 /* SearchRouter.swift */; };
+		DB3905A524EF00C0001B8092 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059E24EF00C0001B8092 /* SearchViewController.swift */; };
+		DB3905A624EF00C0001B8092 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059F24EF00C0001B8092 /* SearchInteractor.swift */; };
+		DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905A024EF00C0001B8092 /* SearchEntity.swift */; };
+		DB3905A824EF00C0001B8092 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3905A124EF00C0001B8092 /* SearchViewController.xib */; };
+		DB3905A924EF00C0001B8092 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905A224EF00C0001B8092 /* SearchService.swift */; };
+		DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */; };
+		DB3905AF24EF00FA001B8092 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */; };
+		DB3905B224EF011F001B8092 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */; };
 		E179139462D8C8E7DC9981A1 /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */; };
 		F2BAD598194C221674EECD0F /* Pods_Mobillium_MovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +55,6 @@
 		D0EBB19FBA609D4233A6E36E /* Pods-Mobillium Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie.debug.xcconfig"; sourceTree = "<group>"; };
 		DB39056724EEFE2C001B8092 /* Mobillium Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB39056A24EEFE2C001B8092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB39056E24EEFE2C001B8092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB39057324EEFE2E001B8092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB39057624EEFE2E001B8092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB39057824EEFE2E001B8092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +64,16 @@
 		DB39058824EEFE2E001B8092 /* Mobillium MovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobillium MovieUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB39058C24EEFE2E001B8092 /* Mobillium_MovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobillium_MovieUITests.swift; sourceTree = "<group>"; };
 		DB39058E24EEFE2E001B8092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB39059C24EF00C0001B8092 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		DB39059D24EF00C0001B8092 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		DB39059E24EF00C0001B8092 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DB39059F24EF00C0001B8092 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		DB3905A024EF00C0001B8092 /* SearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntity.swift; sourceTree = "<group>"; };
+		DB3905A124EF00C0001B8092 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		DB3905A224EF00C0001B8092 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
 		F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,8 +130,9 @@
 		DB39056924EEFE2C001B8092 /* Mobillium Movie */ = {
 			isa = PBXGroup;
 			children = (
-				DB39056A24EEFE2C001B8092 /* AppDelegate.swift */,
-				DB39056E24EEFE2C001B8092 /* ViewController.swift */,
+				DB3905AA24EF00CA001B8092 /* DI */,
+				DB39059A24EF00A8001B8092 /* Scenes */,
+				DB3905B324EF01D7001B8092 /* Common */,
 				DB39057324EEFE2E001B8092 /* Assets.xcassets */,
 				DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */,
 				DB39057824EEFE2E001B8092 /* Info.plist */,
@@ -137,6 +156,62 @@
 				DB39058E24EEFE2E001B8092 /* Info.plist */,
 			);
 			path = "Mobillium MovieUITests";
+			sourceTree = "<group>";
+		};
+		DB39059A24EF00A8001B8092 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DB39059B24EF00B3001B8092 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DB39059B24EF00B3001B8092 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB39059C24EF00C0001B8092 /* SearchPresenter.swift */,
+				DB39059D24EF00C0001B8092 /* SearchRouter.swift */,
+				DB39059E24EF00C0001B8092 /* SearchViewController.swift */,
+				DB39059F24EF00C0001B8092 /* SearchInteractor.swift */,
+				DB3905A024EF00C0001B8092 /* SearchEntity.swift */,
+				DB3905A124EF00C0001B8092 /* SearchViewController.xib */,
+				DB3905A224EF00C0001B8092 /* SearchService.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB3905AA24EF00CA001B8092 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				DB3905B024EF0117001B8092 /* Common */,
+				DB3905AB24EF00CF001B8092 /* Scenes */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		DB3905AB24EF00CF001B8092 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DB3905B024EF0117001B8092 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DB3905B324EF01D7001B8092 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB39056A24EEFE2C001B8092 /* AppDelegate.swift */,
+				DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EAAEDAF6552F33B161E7359C /* Frameworks */ = {
@@ -273,6 +348,7 @@
 			files = (
 				DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */,
 				DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */,
+				DB3905A824EF00C0001B8092 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,8 +476,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB39056F24EEFE2C001B8092 /* ViewController.swift in Sources */,
+				DB3905A624EF00C0001B8092 /* SearchInteractor.swift in Sources */,
+				DB3905AF24EF00FA001B8092 /* ViewControllerFactory.swift in Sources */,
+				DB3905A524EF00C0001B8092 /* SearchViewController.swift in Sources */,
+				DB3905A424EF00C0001B8092 /* SearchRouter.swift in Sources */,
+				DB3905B224EF011F001B8092 /* ViewControllerAssembly.swift in Sources */,
+				DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */,
 				DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */,
+				DB3905A924EF00C0001B8092 /* SearchService.swift in Sources */,
+				DB3905A324EF00C0001B8092 /* SearchPresenter.swift in Sources */,
+				DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
