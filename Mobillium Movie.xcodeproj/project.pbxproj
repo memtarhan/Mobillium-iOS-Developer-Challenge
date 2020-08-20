@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56E2A6AD40220903AF1AC583 /* Pods_Mobillium_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */; };
 		DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056A24EEFE2C001B8092 /* AppDelegate.swift */; };
-		DB39056D24EEFE2C001B8092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056C24EEFE2C001B8092 /* SceneDelegate.swift */; };
 		DB39056F24EEFE2C001B8092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056E24EEFE2C001B8092 /* ViewController.swift */; };
-		DB39057224EEFE2C001B8092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB39057024EEFE2C001B8092 /* Main.storyboard */; };
 		DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB39057324EEFE2E001B8092 /* Assets.xcassets */; };
 		DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */; };
 		DB39058224EEFE2E001B8092 /* Mobillium_MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39058124EEFE2E001B8092 /* Mobillium_MovieTests.swift */; };
 		DB39058D24EEFE2E001B8092 /* Mobillium_MovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39058C24EEFE2E001B8092 /* Mobillium_MovieUITests.swift */; };
+		E179139462D8C8E7DC9981A1 /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */; };
+		F2BAD598194C221674EECD0F /* Pods_Mobillium_MovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10262F008D2AE3C167E6922B /* Pods-Mobillium Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie.release.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie.release.xcconfig"; sourceTree = "<group>"; };
+		206469A3CF9A929968FFA82B /* Pods-Mobillium MovieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium MovieTests.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium MovieTests/Pods-Mobillium MovieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		354833F18073A4D0CCAD8072 /* Pods-Mobillium MovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium MovieTests.release.xcconfig"; path = "Target Support Files/Pods-Mobillium MovieTests/Pods-Mobillium MovieTests.release.xcconfig"; sourceTree = "<group>"; };
+		80CA16FCB63650D7B5F405BD /* Pods-Mobillium Movie-Mobillium MovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie-Mobillium MovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie-Mobillium MovieUITests/Pods-Mobillium Movie-Mobillium MovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFBEFA30492125004FE05464 /* Pods-Mobillium Movie-Mobillium MovieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie-Mobillium MovieUITests.release.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie-Mobillium MovieUITests/Pods-Mobillium Movie-Mobillium MovieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_MovieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_Movie_Mobillium_MovieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EBB19FBA609D4233A6E36E /* Pods-Mobillium Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie.debug.xcconfig"; sourceTree = "<group>"; };
 		DB39056724EEFE2C001B8092 /* Mobillium Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB39056A24EEFE2C001B8092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB39056C24EEFE2C001B8092 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB39056E24EEFE2C001B8092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB39057124EEFE2C001B8092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB39057324EEFE2E001B8092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB39057624EEFE2E001B8092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB39057824EEFE2E001B8092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		DB39058824EEFE2E001B8092 /* Mobillium MovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobillium MovieUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB39058C24EEFE2E001B8092 /* Mobillium_MovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobillium_MovieUITests.swift; sourceTree = "<group>"; };
 		DB39058E24EEFE2E001B8092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E2A6AD40220903AF1AC583 /* Pods_Mobillium_Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BAD598194C221674EECD0F /* Pods_Mobillium_MovieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179139462D8C8E7DC9981A1 /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +94,8 @@
 				DB39058024EEFE2E001B8092 /* Mobillium MovieTests */,
 				DB39058B24EEFE2E001B8092 /* Mobillium MovieUITests */,
 				DB39056824EEFE2C001B8092 /* Products */,
+				F99026B98330B1E6D67A971F /* Pods */,
+				EAAEDAF6552F33B161E7359C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				DB39056A24EEFE2C001B8092 /* AppDelegate.swift */,
-				DB39056C24EEFE2C001B8092 /* SceneDelegate.swift */,
 				DB39056E24EEFE2C001B8092 /* ViewController.swift */,
-				DB39057024EEFE2C001B8092 /* Main.storyboard */,
 				DB39057324EEFE2E001B8092 /* Assets.xcassets */,
 				DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */,
 				DB39057824EEFE2E001B8092 /* Info.plist */,
@@ -128,6 +139,29 @@
 			path = "Mobillium MovieUITests";
 			sourceTree = "<group>";
 		};
+		EAAEDAF6552F33B161E7359C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */,
+				B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */,
+				B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F99026B98330B1E6D67A971F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBB19FBA609D4233A6E36E /* Pods-Mobillium Movie.debug.xcconfig */,
+				10262F008D2AE3C167E6922B /* Pods-Mobillium Movie.release.xcconfig */,
+				80CA16FCB63650D7B5F405BD /* Pods-Mobillium Movie-Mobillium MovieUITests.debug.xcconfig */,
+				AFBEFA30492125004FE05464 /* Pods-Mobillium Movie-Mobillium MovieUITests.release.xcconfig */,
+				206469A3CF9A929968FFA82B /* Pods-Mobillium MovieTests.debug.xcconfig */,
+				354833F18073A4D0CCAD8072 /* Pods-Mobillium MovieTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB39059124EEFE2E001B8092 /* Build configuration list for PBXNativeTarget "Mobillium Movie" */;
 			buildPhases = (
+				945F7BE697155B06D67EF739 /* [CP] Check Pods Manifest.lock */,
 				DB39056324EEFE2C001B8092 /* Sources */,
 				DB39056424EEFE2C001B8092 /* Frameworks */,
 				DB39056524EEFE2C001B8092 /* Resources */,
+				D6CDA4FBA834401ED95684ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB39059424EEFE2E001B8092 /* Build configuration list for PBXNativeTarget "Mobillium MovieTests" */;
 			buildPhases = (
+				E9C54DC1257E1F108AD1675A /* [CP] Check Pods Manifest.lock */,
 				DB39057924EEFE2E001B8092 /* Sources */,
 				DB39057A24EEFE2E001B8092 /* Frameworks */,
 				DB39057B24EEFE2E001B8092 /* Resources */,
@@ -170,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB39059724EEFE2E001B8092 /* Build configuration list for PBXNativeTarget "Mobillium MovieUITests" */;
 			buildPhases = (
+				C7EC51B7B57E6D6E63675F97 /* [CP] Check Pods Manifest.lock */,
 				DB39058424EEFE2E001B8092 /* Sources */,
 				DB39058524EEFE2E001B8092 /* Frameworks */,
 				DB39058624EEFE2E001B8092 /* Resources */,
+				684892B2C6B4FB24F9B79984 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +273,6 @@
 			files = (
 				DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */,
 				DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */,
-				DB39057224EEFE2C001B8092 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +292,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		684892B2C6B4FB24F9B79984 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie-Mobillium MovieUITests/Pods-Mobillium Movie-Mobillium MovieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie-Mobillium MovieUITests/Pods-Mobillium Movie-Mobillium MovieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie-Mobillium MovieUITests/Pods-Mobillium Movie-Mobillium MovieUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		945F7BE697155B06D67EF739 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobillium Movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EC51B7B57E6D6E63675F97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobillium Movie-Mobillium MovieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6CDA4FBA834401ED95684ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C54DC1257E1F108AD1675A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobillium MovieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB39056324EEFE2C001B8092 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +402,6 @@
 			files = (
 				DB39056F24EEFE2C001B8092 /* ViewController.swift in Sources */,
 				DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */,
-				DB39056D24EEFE2C001B8092 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB39057024EEFE2C001B8092 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB39057124EEFE2C001B8092 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +564,7 @@
 		};
 		DB39059224EEFE2E001B8092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0EBB19FBA609D4233A6E36E /* Pods-Mobillium Movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +583,7 @@
 		};
 		DB39059324EEFE2E001B8092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10262F008D2AE3C167E6922B /* Pods-Mobillium Movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +602,7 @@
 		};
 		DB39059524EEFE2E001B8092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206469A3CF9A929968FFA82B /* Pods-Mobillium MovieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +625,7 @@
 		};
 		DB39059624EEFE2E001B8092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 354833F18073A4D0CCAD8072 /* Pods-Mobillium MovieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +648,7 @@
 		};
 		DB39059824EEFE2E001B8092 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80CA16FCB63650D7B5F405BD /* Pods-Mobillium Movie-Mobillium MovieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +669,7 @@
 		};
 		DB39059924EEFE2E001B8092 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBEFA30492125004FE05464 /* Pods-Mobillium Movie-Mobillium MovieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
