@@ -10,7 +10,7 @@ import Alamofire
 import UIKit
 
 protocol ListInteractor: class {
-    func retrieve(forList list: ListType, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void)
+    func retrieve(forList list: ListType, page: Int, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void)
 }
 
 class ListInteractorImpl: ListInteractor {
@@ -20,8 +20,9 @@ class ListInteractorImpl: ListInteractor {
         self.service = service
     }
 
-    func retrieve(forList list: ListType, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void) {
-        let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(APIHelper.key)&language=en-US&page=1"
+    func retrieve(forList list: ListType, page: Int, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void) {
+        let url = "\(list.apiPrefix)api_key=\(APIHelper.key)&language=en-US&page=\(page)"
+        print(url)
         AF.request(url).responseData { response in
             switch response.result {
             case let .success(data):

@@ -19,4 +19,15 @@ struct ListEntity {
 
 enum ListType {
     case upcoming, nowPlaying
+
+    var apiPrefix: String {
+        switch self {
+        case .upcoming: return "\(prefix)/upcoming?"
+        case .nowPlaying: return "\(prefix)/now_playing?"
+        }
+    }
+
+    private var prefix: String {
+        return "https://api.themoviedb.org/3/movie"
+    }
 }

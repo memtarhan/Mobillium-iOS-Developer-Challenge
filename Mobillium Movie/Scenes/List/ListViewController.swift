@@ -48,7 +48,12 @@ class ListViewControllerImpl: UIViewController {
         let cellNib = UINib(nibName: cellNibIdentifier, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: cellReuseIdentifier)
 
-        presenter?.present(.nowPlaying)
+        presenter?.present(forList: .nowPlaying, changedType: false)
+    }
+
+    @IBAction func didChangeType(_ sender: UISegmentedControl) {
+        let list = sender.selectedSegmentIndex == 0 ? ListType.nowPlaying : .upcoming
+        presenter?.present(forList: list, changedType: true)
     }
 
     @objc private func didTapSearch() {
@@ -86,5 +91,11 @@ extension ListViewControllerImpl: UICollectionViewDelegate, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         return collectionView.frame.height / 3
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == models.count - 1 {
+            presenter?.present(forList: .nowPlaying, changedType: false)
+        }
     }
 }

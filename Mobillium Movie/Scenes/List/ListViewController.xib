@@ -25,6 +25,9 @@
                         <segment title="Upcoming"/>
                     </segments>
                     <color key="selectedSegmentTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="didChangeType:" destination="-1" eventType="valueChanged" id="3gR-Mc-Axd"/>
+                    </connections>
                 </segmentedControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-e0-7Ed">
                     <rect key="frame" x="0.0" y="83" width="414" height="779"/>

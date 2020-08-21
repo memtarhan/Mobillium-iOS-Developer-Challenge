@@ -13,7 +13,7 @@ protocol ListPresenter: class {
     var interactor: ListInteractor? { get set }
     var router: ListRouter? { get set }
 
-    func present(_ list: ListType)
+    func present(forList list: ListType, changedType changed: Bool)
 }
 
 class ListPresenterImpl: ListPresenter {
@@ -21,8 +21,11 @@ class ListPresenterImpl: ListPresenter {
     var interactor: ListInteractor?
     var router: ListRouter?
 
-    func present(_ list: ListType) {
-        interactor?.retrieve(forList: list, { result in
+    private var page = 1
+
+    func present(forList list: ListType, changedType changed: Bool) {
+        if changed { page = 1 }
+        interactor?.retrieve(forList: list, page: page, { result in
             switch result {
             case let .success(movies):
                 let response = movies.map { (movie) -> ListEntity.ViewModel in
@@ -32,6 +35,7 @@ class ListPresenterImpl: ListPresenter {
                                          imageUrl: "\(APIHelper.imagePath)\(movie.posterPath)")
                 }
 
+                self.page += 1
                 self.view?.display(response)
 
             case .failure:
