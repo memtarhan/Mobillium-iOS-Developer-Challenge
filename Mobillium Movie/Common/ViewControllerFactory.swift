@@ -10,6 +10,8 @@ import Foundation
 import Swinject
 
 protocol ViewControllerFactory {
+    var details: DetailsViewController { get }
+    var list: ListViewController { get }
     var search: SearchViewController { get }
 }
 
@@ -20,5 +22,7 @@ class ViewControllerFactoryImpl: ViewControllerFactory {
         self.assembler = assembler
     }
 
+    var details: DetailsViewController { assembler.resolver.resolve(DetailsViewController.self)! }
+    var list: ListViewController { assembler.resolver.resolve(ListViewController.self)! }
     var search: SearchViewController { assembler.resolver.resolve(SearchViewController.self)! }
 }

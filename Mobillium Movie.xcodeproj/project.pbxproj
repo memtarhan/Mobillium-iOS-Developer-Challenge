@@ -23,6 +23,22 @@
 		DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */; };
 		DB3905AF24EF00FA001B8092 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */; };
 		DB3905B224EF011F001B8092 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */; };
+		DBBE152924EFBD66004D5C52 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152224EFBD66004D5C52 /* ListPresenter.swift */; };
+		DBBE152A24EFBD66004D5C52 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152324EFBD66004D5C52 /* ListRouter.swift */; };
+		DBBE152B24EFBD66004D5C52 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152424EFBD66004D5C52 /* ListViewController.swift */; };
+		DBBE152C24EFBD66004D5C52 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152524EFBD66004D5C52 /* ListInteractor.swift */; };
+		DBBE152D24EFBD66004D5C52 /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152624EFBD66004D5C52 /* ListEntity.swift */; };
+		DBBE152E24EFBD66004D5C52 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBE152724EFBD66004D5C52 /* ListViewController.xib */; };
+		DBBE152F24EFBD66004D5C52 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE152824EFBD66004D5C52 /* ListService.swift */; };
+		DBBE153124EFBD7D004D5C52 /* ListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE153024EFBD7D004D5C52 /* ListAssembly.swift */; };
+		DBBE159124EFCB77004D5C52 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE158A24EFCB77004D5C52 /* DetailsPresenter.swift */; };
+		DBBE159224EFCB77004D5C52 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE158B24EFCB77004D5C52 /* DetailsRouter.swift */; };
+		DBBE159324EFCB77004D5C52 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE158C24EFCB77004D5C52 /* DetailsViewController.swift */; };
+		DBBE159424EFCB77004D5C52 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE158D24EFCB77004D5C52 /* DetailsInteractor.swift */; };
+		DBBE159524EFCB77004D5C52 /* DetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE158E24EFCB77004D5C52 /* DetailsEntity.swift */; };
+		DBBE159624EFCB77004D5C52 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBE158F24EFCB77004D5C52 /* DetailsViewController.xib */; };
+		DBBE159724EFCB77004D5C52 /* DetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE159024EFCB77004D5C52 /* DetailsService.swift */; };
+		DBBE159924EFCB8C004D5C52 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE159824EFCB8C004D5C52 /* DetailsAssembly.swift */; };
 		E179139462D8C8E7DC9981A1 /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */; };
 		F2BAD598194C221674EECD0F /* Pods_Mobillium_MovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +90,22 @@
 		DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		DBBE152224EFBD66004D5C52 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		DBBE152324EFBD66004D5C52 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		DBBE152424EFBD66004D5C52 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DBBE152524EFBD66004D5C52 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		DBBE152624EFBD66004D5C52 /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
+		DBBE152724EFBD66004D5C52 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		DBBE152824EFBD66004D5C52 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
+		DBBE153024EFBD7D004D5C52 /* ListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAssembly.swift; sourceTree = "<group>"; };
+		DBBE158A24EFCB77004D5C52 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		DBBE158B24EFCB77004D5C52 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		DBBE158C24EFCB77004D5C52 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DBBE158D24EFCB77004D5C52 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		DBBE158E24EFCB77004D5C52 /* DetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEntity.swift; sourceTree = "<group>"; };
+		DBBE158F24EFCB77004D5C52 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		DBBE159024EFCB77004D5C52 /* DetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsService.swift; sourceTree = "<group>"; };
+		DBBE159824EFCB8C004D5C52 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
 		F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +193,8 @@
 		DB39059A24EF00A8001B8092 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE158924EFCB68004D5C52 /* Details */,
+				DBBE152124EFBD38004D5C52 /* List */,
 				DB39059B24EF00B3001B8092 /* Search */,
 			);
 			path = Scenes;
@@ -169,13 +203,13 @@
 		DB39059B24EF00B3001B8092 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DB3905A024EF00C0001B8092 /* SearchEntity.swift */,
+				DB39059F24EF00C0001B8092 /* SearchInteractor.swift */,
 				DB39059C24EF00C0001B8092 /* SearchPresenter.swift */,
 				DB39059D24EF00C0001B8092 /* SearchRouter.swift */,
-				DB39059E24EF00C0001B8092 /* SearchViewController.swift */,
-				DB39059F24EF00C0001B8092 /* SearchInteractor.swift */,
-				DB3905A024EF00C0001B8092 /* SearchEntity.swift */,
-				DB3905A124EF00C0001B8092 /* SearchViewController.xib */,
 				DB3905A224EF00C0001B8092 /* SearchService.swift */,
+				DB39059E24EF00C0001B8092 /* SearchViewController.swift */,
+				DB3905A124EF00C0001B8092 /* SearchViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -192,6 +226,8 @@
 		DB3905AB24EF00CF001B8092 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE159824EFCB8C004D5C52 /* DetailsAssembly.swift */,
+				DBBE153024EFBD7D004D5C52 /* ListAssembly.swift */,
 				DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */,
 			);
 			path = Scenes;
@@ -212,6 +248,34 @@
 				DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DBBE152124EFBD38004D5C52 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE152624EFBD66004D5C52 /* ListEntity.swift */,
+				DBBE152524EFBD66004D5C52 /* ListInteractor.swift */,
+				DBBE152224EFBD66004D5C52 /* ListPresenter.swift */,
+				DBBE152324EFBD66004D5C52 /* ListRouter.swift */,
+				DBBE152824EFBD66004D5C52 /* ListService.swift */,
+				DBBE152424EFBD66004D5C52 /* ListViewController.swift */,
+				DBBE152724EFBD66004D5C52 /* ListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		DBBE158924EFCB68004D5C52 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE158E24EFCB77004D5C52 /* DetailsEntity.swift */,
+				DBBE158D24EFCB77004D5C52 /* DetailsInteractor.swift */,
+				DBBE158A24EFCB77004D5C52 /* DetailsPresenter.swift */,
+				DBBE158B24EFCB77004D5C52 /* DetailsRouter.swift */,
+				DBBE159024EFCB77004D5C52 /* DetailsService.swift */,
+				DBBE158C24EFCB77004D5C52 /* DetailsViewController.swift */,
+				DBBE158F24EFCB77004D5C52 /* DetailsViewController.xib */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		EAAEDAF6552F33B161E7359C /* Frameworks */ = {
@@ -348,6 +412,8 @@
 			files = (
 				DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */,
 				DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */,
+				DBBE159624EFCB77004D5C52 /* DetailsViewController.xib in Resources */,
+				DBBE152E24EFBD66004D5C52 /* ListViewController.xib in Resources */,
 				DB3905A824EF00C0001B8092 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +542,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBE159724EFCB77004D5C52 /* DetailsService.swift in Sources */,
+				DBBE152A24EFBD66004D5C52 /* ListRouter.swift in Sources */,
+				DBBE159424EFCB77004D5C52 /* DetailsInteractor.swift in Sources */,
 				DB3905A624EF00C0001B8092 /* SearchInteractor.swift in Sources */,
 				DB3905AF24EF00FA001B8092 /* ViewControllerFactory.swift in Sources */,
 				DB3905A524EF00C0001B8092 /* SearchViewController.swift in Sources */,
@@ -484,8 +553,19 @@
 				DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */,
 				DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */,
 				DB3905A924EF00C0001B8092 /* SearchService.swift in Sources */,
+				DBBE152F24EFBD66004D5C52 /* ListService.swift in Sources */,
+				DBBE152924EFBD66004D5C52 /* ListPresenter.swift in Sources */,
+				DBBE152C24EFBD66004D5C52 /* ListInteractor.swift in Sources */,
+				DBBE159924EFCB8C004D5C52 /* DetailsAssembly.swift in Sources */,
 				DB3905A324EF00C0001B8092 /* SearchPresenter.swift in Sources */,
+				DBBE152D24EFBD66004D5C52 /* ListEntity.swift in Sources */,
+				DBBE159224EFCB77004D5C52 /* DetailsRouter.swift in Sources */,
+				DBBE152B24EFBD66004D5C52 /* ListViewController.swift in Sources */,
 				DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */,
+				DBBE153124EFBD7D004D5C52 /* ListAssembly.swift in Sources */,
+				DBBE159124EFCB77004D5C52 /* DetailsPresenter.swift in Sources */,
+				DBBE159324EFCB77004D5C52 /* DetailsViewController.swift in Sources */,
+				DBBE159524EFCB77004D5C52 /* DetailsEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L9L899V66;
 				INFOPLIST_FILE = "Mobillium Movie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,6 +754,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L9L899V66;
 				INFOPLIST_FILE = "Mobillium Movie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
