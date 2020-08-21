@@ -9,4 +9,14 @@
 import UIKit
 
 struct ListEntity {
+    struct ViewModel {
+        var title: String
+        var popularity: String
+        var releaseDate: String
+        var imageUrl: String
+    }
+}
+
+enum ListType {
+    case upcoming, nowPlaying
 }

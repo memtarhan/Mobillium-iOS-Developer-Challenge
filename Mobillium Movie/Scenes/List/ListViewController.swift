@@ -10,6 +10,8 @@ import UIKit
 
 protocol ListViewController: class {
     var presenter: ListPresenter? { get set }
+
+    func display(_ response: [ListEntity.ViewModel])
 }
 
 class ListViewControllerImpl: UIViewController {
@@ -19,6 +21,8 @@ class ListViewControllerImpl: UIViewController {
 
     private let cellReuseIdentifier = "Movie"
     private let cellNibIdentifier = "MovieCollectionViewCell"
+
+    private var models: [ListEntity.ViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +48,7 @@ class ListViewControllerImpl: UIViewController {
         let cellNib = UINib(nibName: cellNibIdentifier, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: cellReuseIdentifier)
 
-        presenter?.present()
+        presenter?.present(.nowPlaying)
     }
 
     @objc private func didTapSearch() {
@@ -54,17 +58,24 @@ class ListViewControllerImpl: UIViewController {
 // MARK: - ListViewController
 
 extension ListViewControllerImpl: ListViewController {
+    func display(_ response: [ListEntity.ViewModel]) {
+        models.append(contentsOf: response)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate - UICollectionViewDataSource
 
 extension ListViewControllerImpl: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CustomLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return models.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
+        cell.model = models[indexPath.row]
         return cell
     }
 

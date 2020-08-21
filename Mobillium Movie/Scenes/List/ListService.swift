@@ -10,11 +10,11 @@ import Alamofire
 import UIKit
 
 protocol ListService: class {
-    func retrieve()
+    func retrieve(forList list: ListType, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void)
 }
 
 class ListServiceImpl: ListService {
-    func retrieve() {
+    func retrieve(forList list: ListType, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void) {
         let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(APIHelper.key)&language=en-US&page=1"
         AF.request(url).responseData { response in
             switch response.result {
@@ -25,15 +25,14 @@ class ListServiceImpl: ListService {
 
                 do {
                     let movies = try decoder.decode(Movies.self, from: data)
-                    movies.results.forEach { (movie) in
-                        print("\(APIHelper.imagePath)\(movie.posterPath)")
-                    }
+                    completionHandler(.success(movies.results))
+
                 } catch {
-                    print("Failed to decode JSON")
+                    completionHandler(.failure(error))
                 }
 
             case let .failure(error):
-                print(error)
+                completionHandler(.failure(error))
             }
         }
     }
