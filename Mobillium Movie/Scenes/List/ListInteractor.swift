@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ListInteractor: class {
+    func retrive()
 }
 
 class ListInteractorImpl: ListInteractor {
@@ -17,5 +18,9 @@ class ListInteractorImpl: ListInteractor {
 
     init(service: ListService) {
         self.service = service
+    }
+    
+    func retrive() {
+        service.retrieve()
     }
 }

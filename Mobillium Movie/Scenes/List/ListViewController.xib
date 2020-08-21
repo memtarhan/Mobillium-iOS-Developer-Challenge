@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewControllerImpl" customModule="Mobillium_Movie" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="J9X-e0-7Ed" id="RTA-LS-Nqb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,40 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zwM-hU-cwu">
+                    <rect key="frame" x="32" y="52" width="350" height="32"/>
+                    <segments>
+                        <segment title="Now playing"/>
+                        <segment title="Upcoming"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-e0-7Ed">
+                    <rect key="frame" x="0.0" y="83" width="414" height="779"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ofG-Tm-ylx">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="THX-ip-xWt"/>
+                        <outlet property="delegate" destination="-1" id="7FM-Zx-brs"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J9X-e0-7Ed" secondAttribute="trailing" id="7h6-m9-rrb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J9X-e0-7Ed" secondAttribute="bottom" id="QNY-kt-P2s"/>
+                <constraint firstItem="zwM-hU-cwu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="jhz-Xw-g1c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zwM-hU-cwu" secondAttribute="trailing" constant="32" id="jwd-M5-SGu"/>
+                <constraint firstItem="J9X-e0-7Ed" firstAttribute="top" secondItem="zwM-hU-cwu" secondAttribute="bottom" id="mVm-HP-rSZ"/>
+                <constraint firstItem="zwM-hU-cwu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="qPO-Ol-Zf8"/>
+                <constraint firstItem="J9X-e0-7Ed" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uDD-DB-yw2"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="152"/>
         </view>

@@ -12,10 +12,16 @@ protocol ListPresenter: class {
     var view: ListViewController? { get set }
     var interactor: ListInteractor? { get set }
     var router: ListRouter? { get set }
+    
+    func present()
 }
 
 class ListPresenterImpl: ListPresenter {
     var view: ListViewController?
     var interactor: ListInteractor?
     var router: ListRouter?
+    
+    func present() {
+        interactor?.retrive()
+    }
 }

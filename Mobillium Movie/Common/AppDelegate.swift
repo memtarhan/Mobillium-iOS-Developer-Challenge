@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     /// - Initializing UI w/ initial view controller
     func initUI() {
-        guard let initialViewController = assembler?.resolver.resolve(SearchViewController.self)! as? UIViewController else { return }
+        guard let initialViewController = assembler?.resolver.resolve(ListViewController.self)! as? UIViewController else { return }
         let navigationController = UINavigationController(rootViewController: initialViewController)
         rootViewController = navigationController
     }
