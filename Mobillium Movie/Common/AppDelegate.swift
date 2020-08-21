@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// - Initializing dependency injection
     private func initDI() {
         assembler = Assembler([
+            DetailsAssembly(),
             ListAssembly(),
             SearchAssembly(),
         ])

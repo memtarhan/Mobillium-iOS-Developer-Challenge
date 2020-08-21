@@ -14,6 +14,7 @@ struct ListEntity {
         var popularity: String
         var releaseDate: String
         var imageUrl: String
+        var id: String
     }
 }
 

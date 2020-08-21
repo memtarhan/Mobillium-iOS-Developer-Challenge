@@ -13,10 +13,19 @@ struct Movie: Codable {
     var popularity: Double
     var releaseDate: String
     var posterPath: String
+    var id: Int
 }
 
 struct Movies: Codable {
     var results: [Movie]
+}
+
+struct MovieDetails: Codable {
+    var title: String
+    var popularity: Double
+    var releaseDate: String
+    var posterPath: String
+    var imdbId: String
 }
 
 extension String {

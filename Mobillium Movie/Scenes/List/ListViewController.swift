@@ -53,6 +53,7 @@ class ListViewControllerImpl: UIViewController {
 
     @IBAction func didChangeType(_ sender: UISegmentedControl) {
         let list = sender.selectedSegmentIndex == 0 ? ListType.nowPlaying : .upcoming
+        models.removeAll()
         presenter?.present(forList: list, changedType: true)
     }
 
@@ -97,5 +98,9 @@ extension ListViewControllerImpl: UICollectionViewDelegate, UICollectionViewData
         if indexPath.row == models.count - 1 {
             presenter?.present(forList: .nowPlaying, changedType: false)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.present(detailsFor: models[indexPath.row].id)
     }
 }

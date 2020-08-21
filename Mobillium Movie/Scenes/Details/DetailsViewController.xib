@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +16,40 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5MSDwUcqnGodFTvtlLiLKK0XKS" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-5h-xdS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48R-WC-KiK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Secret Garden" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-9F-0Ul">
+                    <rect key="frame" x="8" y="30" width="398" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="48R-WC-KiK" firstAttribute="top" secondItem="uXG-5h-xdS" secondAttribute="top" id="EyI-pJ-XBE"/>
+                <constraint firstItem="48R-WC-KiK" firstAttribute="leading" secondItem="uXG-5h-xdS" secondAttribute="leading" id="JNX-7l-0XR"/>
+                <constraint firstItem="uXG-5h-xdS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sgd-GF-bhi"/>
+                <constraint firstItem="48R-WC-KiK" firstAttribute="bottom" secondItem="uXG-5h-xdS" secondAttribute="bottom" id="UeQ-IT-Lma"/>
+                <constraint firstAttribute="bottom" secondItem="uXG-5h-xdS" secondAttribute="bottom" id="YVg-qf-HSB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uXG-5h-xdS" secondAttribute="trailing" id="dii-bA-df4"/>
+                <constraint firstItem="3dj-9F-0Ul" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="fJH-b9-1K8"/>
+                <constraint firstItem="uXG-5h-xdS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j9j-PO-Qr5"/>
+                <constraint firstItem="48R-WC-KiK" firstAttribute="trailing" secondItem="uXG-5h-xdS" secondAttribute="trailing" id="kfJ-VR-vZY"/>
+                <constraint firstItem="3dj-9F-0Ul" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="spa-Ix-QsF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3dj-9F-0Ul" secondAttribute="trailing" constant="8" id="xTa-G0-nqr"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="152"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
         </view>
     </objects>
+    <resources>
+        <image name="5MSDwUcqnGodFTvtlLiLKK0XKS" width="2000" height="3000"/>
+    </resources>
 </document>

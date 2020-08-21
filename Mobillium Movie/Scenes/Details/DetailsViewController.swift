@@ -10,10 +10,14 @@ import UIKit
 
 protocol DetailsViewController: class {
     var presenter: DetailsPresenter? { get set }
+
+    var movieId: String? { get set }
 }
 
 class DetailsViewControllerImpl: UIViewController {
     var presenter: DetailsPresenter?
+
+    var movieId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +27,13 @@ class DetailsViewControllerImpl: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         localize()
+        
+        presenter?.present(movieId ?? "")
     }
-    
+
     private func setup() {
     }
-    
+
     private func localize() {
     }
 }
@@ -36,4 +42,3 @@ class DetailsViewControllerImpl: UIViewController {
 
 extension DetailsViewControllerImpl: DetailsViewController {
 }
-

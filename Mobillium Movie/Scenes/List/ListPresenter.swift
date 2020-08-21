@@ -14,6 +14,7 @@ protocol ListPresenter: class {
     var router: ListRouter? { get set }
 
     func present(forList list: ListType, changedType changed: Bool)
+    func present(detailsFor movie: String)
 }
 
 class ListPresenterImpl: ListPresenter {
@@ -32,7 +33,8 @@ class ListPresenterImpl: ListPresenter {
                     ListEntity.ViewModel(title: movie.title,
                                          popularity: "\(Int(movie.popularity))%",
                                          releaseDate: movie.releaseDate,
-                                         imageUrl: "\(APIHelper.imagePath)\(movie.posterPath)")
+                                         imageUrl: "\(APIHelper.imagePath)\(movie.posterPath)",
+                                         id: "\(movie.id)")
                 }
 
                 self.page += 1
@@ -42,5 +44,9 @@ class ListPresenterImpl: ListPresenter {
                 break
             }
         })
+    }
+
+    func present(detailsFor movie: String) {
+        router?.navigateToDetails(forMovie: movie)
     }
 }
