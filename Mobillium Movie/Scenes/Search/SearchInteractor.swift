@@ -14,12 +14,6 @@ protocol SearchInteractor: class {
 }
 
 class SearchInteractorImpl: SearchInteractor {
-    private let service: SearchService
-
-    init(service: SearchService) {
-        self.service = service
-    }
-
     func retrieve(forKeyword keyword: String, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void) {
         let url = "\(APIHelper.searchPath)api_key=\(APIHelper.key)&query=\(keyword)"
         AF.request(url).responseData { response in

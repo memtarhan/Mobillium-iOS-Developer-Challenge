@@ -13,6 +13,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet var coverImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
+    @IBOutlet var circularView: CircularProgressView!
+    @IBOutlet var rateLabel: UILabel!
 
     var model: ListEntity.ViewModel? {
         didSet {
@@ -21,6 +23,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
                 coverImageView.kf.setImage(with: imageUrl)
                 titleLabel.text = model.title
                 releaseDateLabel.text = model.releaseDate
+                rateLabel.text = "\(model.ratePercentage)"
+                circularView.fillBorder(model.rateValue)
+                circularView.strokeColor = model.rateColor
             }
         }
     }

@@ -50,14 +50,26 @@
                                     <constraint firstAttribute="width" constant="50" id="yhk-He-dbG"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-1s-ks0">
+                                <rect key="frame" x="8" y="227" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RK9-T1-RIe"/>
+                                    <constraint firstAttribute="width" constant="50" id="gR2-oN-nNE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xGH-rW-Pme" firstAttribute="top" secondItem="Zil-VA-7ml" secondAttribute="bottom" constant="20" id="0eh-5l-Yps"/>
                             <constraint firstItem="dgR-aY-ruw" firstAttribute="top" secondItem="sTG-Ui-ArV" secondAttribute="top" id="1hI-HZ-in5"/>
                             <constraint firstItem="xGH-rW-Pme" firstAttribute="leading" secondItem="sTG-Ui-ArV" secondAttribute="leading" constant="8" id="CVq-kZ-dJ2"/>
                             <constraint firstItem="dgR-aY-ruw" firstAttribute="leading" secondItem="sTG-Ui-ArV" secondAttribute="leading" id="J7Y-IO-nfL"/>
+                            <constraint firstItem="Txe-1s-ks0" firstAttribute="centerX" secondItem="Zil-VA-7ml" secondAttribute="centerX" id="dp0-VR-16V"/>
                             <constraint firstAttribute="trailing" secondItem="dgR-aY-ruw" secondAttribute="trailing" id="f6P-7T-dCu"/>
+                            <constraint firstItem="Txe-1s-ks0" firstAttribute="centerY" secondItem="Zil-VA-7ml" secondAttribute="centerY" id="fsJ-er-JrE"/>
                             <constraint firstAttribute="trailing" secondItem="xGH-rW-Pme" secondAttribute="trailing" constant="8" id="hBa-20-dio"/>
                             <constraint firstItem="Zil-VA-7ml" firstAttribute="leading" secondItem="sTG-Ui-ArV" secondAttribute="leading" constant="8" id="hZX-Mg-opf"/>
                             <constraint firstItem="dgR-aY-ruw" firstAttribute="bottom" secondItem="Zil-VA-7ml" secondAttribute="centerY" id="iu8-WZ-8iv"/>
@@ -80,7 +92,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="278" height="357"/>
             <connections>
+                <outlet property="circularView" destination="Zil-VA-7ml" id="QgQ-6v-KTt"/>
                 <outlet property="coverImageView" destination="dgR-aY-ruw" id="ySf-KC-NCL"/>
+                <outlet property="rateLabel" destination="Txe-1s-ks0" id="8A7-Tz-bHj"/>
                 <outlet property="releaseDateLabel" destination="QF5-MV-rAX" id="bL8-6i-6b4"/>
                 <outlet property="titleLabel" destination="BMx-G0-A9u" id="sX8-ce-ncw"/>
             </connections>

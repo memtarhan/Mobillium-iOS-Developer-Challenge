@@ -18,9 +18,7 @@
 		DB3905A424EF00C0001B8092 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059D24EF00C0001B8092 /* SearchRouter.swift */; };
 		DB3905A524EF00C0001B8092 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059E24EF00C0001B8092 /* SearchViewController.swift */; };
 		DB3905A624EF00C0001B8092 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39059F24EF00C0001B8092 /* SearchInteractor.swift */; };
-		DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905A024EF00C0001B8092 /* SearchEntity.swift */; };
 		DB3905A824EF00C0001B8092 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3905A124EF00C0001B8092 /* SearchViewController.xib */; };
-		DB3905A924EF00C0001B8092 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905A224EF00C0001B8092 /* SearchService.swift */; };
 		DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */; };
 		DB3905AF24EF00FA001B8092 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */; };
 		DB3905B224EF011F001B8092 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */; };
@@ -91,9 +89,7 @@
 		DB39059D24EF00C0001B8092 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		DB39059E24EF00C0001B8092 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB39059F24EF00C0001B8092 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
-		DB3905A024EF00C0001B8092 /* SearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntity.swift; sourceTree = "<group>"; };
 		DB3905A124EF00C0001B8092 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		DB3905A224EF00C0001B8092 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		DB3905AC24EF00DA001B8092 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		DB3905B124EF011F001B8092 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
@@ -235,11 +231,9 @@
 		DB39059B24EF00B3001B8092 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				DB3905A024EF00C0001B8092 /* SearchEntity.swift */,
 				DB39059F24EF00C0001B8092 /* SearchInteractor.swift */,
 				DB39059C24EF00C0001B8092 /* SearchPresenter.swift */,
 				DB39059D24EF00C0001B8092 /* SearchRouter.swift */,
-				DB3905A224EF00C0001B8092 /* SearchService.swift */,
 				DB39059E24EF00C0001B8092 /* SearchViewController.swift */,
 				DB3905A124EF00C0001B8092 /* SearchViewController.xib */,
 			);
@@ -604,7 +598,6 @@
 				DB3905AD24EF00DA001B8092 /* SearchAssembly.swift in Sources */,
 				DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */,
 				DBBE15A424EFD477004D5C52 /* APIHelper.swift in Sources */,
-				DB3905A924EF00C0001B8092 /* SearchService.swift in Sources */,
 				DBBE152F24EFBD66004D5C52 /* ListService.swift in Sources */,
 				DBBE152924EFBD66004D5C52 /* ListPresenter.swift in Sources */,
 				DBBE152C24EFBD66004D5C52 /* ListInteractor.swift in Sources */,
@@ -616,7 +609,6 @@
 				DBBE159224EFCB77004D5C52 /* DetailsRouter.swift in Sources */,
 				DBBE152B24EFBD66004D5C52 /* ListViewController.swift in Sources */,
 				DB91CFBC24EFE59000D6C6FC /* CustomLayout.swift in Sources */,
-				DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */,
 				DB14DA7924F12C95003CA9E5 /* CircularProgressView.swift in Sources */,
 				DBBE153124EFBD7D004D5C52 /* ListAssembly.swift in Sources */,
 				DBBE159124EFCB77004D5C52 /* DetailsPresenter.swift in Sources */,

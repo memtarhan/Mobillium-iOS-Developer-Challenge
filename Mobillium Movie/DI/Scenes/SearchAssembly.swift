@@ -30,16 +30,12 @@ class SearchAssembly: Assembly {
             SearchPresenterImpl()
         }
 
-        container.register(SearchInteractor.self) { r in
-            SearchInteractorImpl(service: r.resolve(SearchService.self)!)
+        container.register(SearchInteractor.self) { _ in
+            SearchInteractorImpl()
         }
 
         container.register(SearchRouter.self) { r in
             SearchRouterImpl(factory: r.resolve(ViewControllerFactory.self)!)
-        }
-
-        container.register(SearchService.self) { _ in
-            SearchServiceImpl()
         }
     }
 }

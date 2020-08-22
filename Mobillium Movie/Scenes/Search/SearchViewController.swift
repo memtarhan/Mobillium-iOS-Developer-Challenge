@@ -111,13 +111,7 @@ extension SearchViewControllerImpl: UICollectionViewDelegate, UICollectionViewDa
         return collectionView.frame.height / 3
     }
 
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == models.count - 1 {
-            // presenter?.present(forList: .nowPlaying, changedType: false)
-        }
-    }
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // presenter?.present(detailsFor: models[indexPath.row].id)
+        presenter?.presentDetails(for: models[indexPath.row].id)
     }
 }

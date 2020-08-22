@@ -14,6 +14,7 @@ protocol SearchPresenter: class {
     var router: SearchRouter? { get set }
 
     func present(_ keyword: String)
+    func presentDetails(for movie: String)
 }
 
 class SearchPresenterImpl: SearchPresenter {
@@ -26,8 +27,15 @@ class SearchPresenterImpl: SearchPresenter {
             switch result {
             case let .success(movies):
                 let response = movies.map { (movie) -> ListEntity.ViewModel in
-                    ListEntity.ViewModel(title: movie.title,
-                                         popularity: "\(Int(movie.popularity))%",
+                    let rateColor: UIColor!
+                    if movie.popularity < 50 { rateColor = .red }
+                    else if movie.popularity > 80 { rateColor = .green }
+                    else { rateColor = .yellow }
+
+                    return ListEntity.ViewModel(title: movie.title,
+                                         rateValue: CGFloat(movie.popularity / 100.0),
+                                         ratePercentage: Int(movie.popularity),
+                                         rateColor: rateColor,
                                          releaseDate: movie.releaseDate,
                                          imageUrl: "\(APIHelper.imagePath)\(movie.posterPath)",
                                          id: "\(movie.id)")
@@ -39,5 +47,9 @@ class SearchPresenterImpl: SearchPresenter {
                 break
             }
         })
+    }
+    
+    func presentDetails(for movie: String) {
+        router?.navigateToDetails(forMovie: movie)
     }
 }

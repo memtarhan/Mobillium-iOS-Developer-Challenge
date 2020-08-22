@@ -11,7 +11,9 @@ import UIKit
 struct ListEntity {
     struct ViewModel {
         var title: String
-        var popularity: String
+        let rateValue: CGFloat
+        let ratePercentage: Int
+        let rateColor: UIColor
         var releaseDate: String
         var imageUrl: String
         var id: String

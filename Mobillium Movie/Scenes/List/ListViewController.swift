@@ -111,6 +111,6 @@ extension ListViewControllerImpl: UICollectionViewDelegate, UICollectionViewData
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.present(detailsFor: models[indexPath.row].id)
+        presenter?.presentDetails(for: models[indexPath.row].id)
     }
 }

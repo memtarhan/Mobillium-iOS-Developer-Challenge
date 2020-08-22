@@ -14,7 +14,7 @@ protocol ListPresenter: class {
     var router: ListRouter? { get set }
 
     func present(forList list: ListType, changedType changed: Bool)
-    func present(detailsFor movie: String)
+    func presentDetails(for movie: String)
     func presentSearch()
 }
 
@@ -31,8 +31,15 @@ class ListPresenterImpl: ListPresenter {
             switch result {
             case let .success(movies):
                 let response = movies.map { (movie) -> ListEntity.ViewModel in
-                    ListEntity.ViewModel(title: movie.title,
-                                         popularity: "\(Int(movie.popularity))%",
+                    let rateColor: UIColor!
+                    if movie.popularity < 50 { rateColor = .red }
+                    else if movie.popularity > 80 { rateColor = .green }
+                    else { rateColor = .yellow }
+                    
+                    return ListEntity.ViewModel(title: movie.title,
+                                         rateValue: CGFloat(movie.popularity / 100.0),
+                                         ratePercentage: Int(movie.popularity),
+                                         rateColor: rateColor,
                                          releaseDate: movie.releaseDate,
                                          imageUrl: "\(APIHelper.imagePath)\(movie.posterPath)",
                                          id: "\(movie.id)")
@@ -47,7 +54,7 @@ class ListPresenterImpl: ListPresenter {
         })
     }
 
-    func present(detailsFor movie: String) {
+    func presentDetails(for movie: String) {
         router?.navigateToDetails(forMovie: movie)
     }
 
