@@ -58,6 +58,7 @@ class ListViewControllerImpl: UIViewController {
     }
 
     @objc private func didTapSearch() {
+        presenter?.presentSearch()
     }
 }
 
@@ -99,7 +100,7 @@ extension ListViewControllerImpl: UICollectionViewDelegate, UICollectionViewData
             presenter?.present(forList: .nowPlaying, changedType: false)
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.present(detailsFor: models[indexPath.row].id)
     }

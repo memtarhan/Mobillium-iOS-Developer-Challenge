@@ -9,9 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewControllerImpl" customModule="Mobillium_Movie" customModuleProvider="target">
             <connections>
-                <outlet property="overviewLabel" destination="Qum-yf-Ngg" id="kRL-dM-4oJ"/>
+                <outlet property="circularView" destination="hGB-1h-PJv" id="guw-Ry-7Zn"/>
+                <outlet property="overviewTextView" destination="IUV-GV-cEO" id="b0O-1n-PKO"/>
                 <outlet property="posterImageView" destination="uXG-5h-xdS" id="f0M-j9-2WL"/>
-                <outlet property="rateLabel" destination="3dj-9F-0Ul" id="KfI-Ud-8ir"/>
+                <outlet property="rateLabel" destination="gXx-kB-ymB" id="bC4-Id-giW"/>
                 <outlet property="titleLabel" destination="5Yj-MZ-Pri" id="zPW-MP-MaS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,29 +28,40 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48R-WC-KiK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="txF-Il-ncS">
-                            <rect key="frame" x="20" y="20" width="374" height="110"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-MZ-Pri" userLabel="Title">
+                            <rect key="frame" x="20" y="30" width="374" height="43"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGB-1h-PJv" customClass="CircularProgressView" customModule="Mobillium_Movie" customModuleProvider="target">
+                            <rect key="frame" x="175" y="105" width="64" height="64"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-MZ-Pri" userLabel="Title">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-9F-0Ul" userLabel="Rate">
-                                    <rect key="frame" x="0.0" y="43" width="374" height="43"/>
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Secret Garden" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-yf-Ngg" userLabel="Overview">
-                                    <rect key="frame" x="0.0" y="86" width="374" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-kB-ymB">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="gXx-kB-ymB" secondAttribute="trailing" id="4bL-KP-YnM"/>
+                                <constraint firstItem="gXx-kB-ymB" firstAttribute="top" secondItem="hGB-1h-PJv" secondAttribute="top" id="5lk-AO-u6I"/>
+                                <constraint firstAttribute="bottom" secondItem="gXx-kB-ymB" secondAttribute="bottom" id="CXT-Lk-vTJ"/>
+                                <constraint firstAttribute="width" constant="64" id="aLG-6T-viF"/>
+                                <constraint firstItem="gXx-kB-ymB" firstAttribute="leading" secondItem="hGB-1h-PJv" secondAttribute="leading" id="f7g-KY-aCG"/>
+                                <constraint firstAttribute="height" constant="64" id="wkt-VA-wLM"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-GV-cEO">
+                            <rect key="frame" x="20" y="229" width="374" height="481"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Qj-uG1">
                             <rect key="frame" x="159" y="770" width="96" height="96"/>
                             <state key="normal" image="icons8-imdb-96"/>
@@ -60,11 +72,17 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="txF-Il-ncS" firstAttribute="leading" secondItem="48R-WC-KiK" secondAttribute="leading" constant="20" id="7Oo-F2-04y"/>
+                        <constraint firstItem="5Yj-MZ-Pri" firstAttribute="top" secondItem="48R-WC-KiK" secondAttribute="top" constant="30" id="5kO-eG-p9E"/>
+                        <constraint firstItem="PK2-Qj-uG1" firstAttribute="top" secondItem="IUV-GV-cEO" secondAttribute="bottom" constant="60" id="6ye-e8-NTq"/>
                         <constraint firstAttribute="bottom" secondItem="PK2-Qj-uG1" secondAttribute="bottom" constant="30" id="7v1-pS-RCY"/>
-                        <constraint firstItem="txF-Il-ncS" firstAttribute="top" secondItem="48R-WC-KiK" secondAttribute="top" constant="20" id="FNJ-2C-DaT"/>
-                        <constraint firstAttribute="trailing" secondItem="txF-Il-ncS" secondAttribute="trailing" constant="20" id="Lk9-0e-hKF"/>
+                        <constraint firstItem="IUV-GV-cEO" firstAttribute="leading" secondItem="48R-WC-KiK" secondAttribute="leading" constant="20" id="EAC-kg-ZiS"/>
+                        <constraint firstItem="IUV-GV-cEO" firstAttribute="top" secondItem="hGB-1h-PJv" secondAttribute="bottom" constant="60" id="KEh-TE-ab0"/>
+                        <constraint firstItem="5Yj-MZ-Pri" firstAttribute="leading" secondItem="48R-WC-KiK" secondAttribute="leading" constant="20" id="Ow8-Js-mIw"/>
+                        <constraint firstAttribute="trailing" secondItem="IUV-GV-cEO" secondAttribute="trailing" constant="20" id="QZa-OE-2E1"/>
+                        <constraint firstAttribute="trailing" secondItem="5Yj-MZ-Pri" secondAttribute="trailing" constant="20" id="W40-BY-JCB"/>
+                        <constraint firstItem="hGB-1h-PJv" firstAttribute="top" secondItem="5Yj-MZ-Pri" secondAttribute="bottom" constant="32" id="lGU-13-sbh"/>
                         <constraint firstItem="PK2-Qj-uG1" firstAttribute="centerX" secondItem="48R-WC-KiK" secondAttribute="centerX" id="n3P-kp-qn9"/>
+                        <constraint firstItem="hGB-1h-PJv" firstAttribute="centerX" secondItem="48R-WC-KiK" secondAttribute="centerX" id="nGN-Uo-kRY"/>
                     </constraints>
                 </view>
             </subviews>

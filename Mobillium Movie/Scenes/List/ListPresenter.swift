@@ -15,6 +15,7 @@ protocol ListPresenter: class {
 
     func present(forList list: ListType, changedType changed: Bool)
     func present(detailsFor movie: String)
+    func presentSearch()
 }
 
 class ListPresenterImpl: ListPresenter {
@@ -48,5 +49,9 @@ class ListPresenterImpl: ListPresenter {
 
     func present(detailsFor movie: String) {
         router?.navigateToDetails(forMovie: movie)
+    }
+
+    func presentSearch() {
+        router?.navigateToSearch()
     }
 }

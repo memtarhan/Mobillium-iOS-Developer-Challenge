@@ -12,6 +12,7 @@ protocol ListRouter: class {
     var view: ListViewController? { get set }
 
     func navigateToDetails(forMovie movie: String)
+    func navigateToSearch()
 }
 
 class ListRouterImpl: ListRouter {
@@ -29,5 +30,12 @@ class ListRouterImpl: ListRouter {
         guard let nextViewController = next as? UIViewController,
             let sourceViewController = view as? UIViewController else { return }
         sourceViewController.present(nextViewController, animated: true, completion: nil)
+    }
+
+    func navigateToSearch() {
+        let next = factory.search
+        guard let nextViewController = next as? UIViewController,
+            let sourceViewController = view as? UIViewController else { return }
+        sourceViewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

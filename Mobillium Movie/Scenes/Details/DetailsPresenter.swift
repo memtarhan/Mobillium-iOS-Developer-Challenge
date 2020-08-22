@@ -25,12 +25,19 @@ class DetailsPresenterImpl: DetailsPresenter {
         interactor?.retriveDetails(for: id, { result in
             switch result {
             case let .success(details):
+                let rateColor: UIColor!
+                if details.popularity < 50 { rateColor = .red }
+                else if details.popularity > 80 { rateColor = .green }
+                else { rateColor = .yellow }
+
                 let response = DetailsEntity.Response(title: details.title,
-                                                      rate: "\(Int(details.popularity))%",
+                                                      rateValue: CGFloat(details.popularity / 100.0),
+                                                      ratePercentage: Int(details.popularity),
+                                                      rateColor: rateColor,
                                                       overview: details.overview,
                                                       posterURL: "\(APIHelper.imagePath)\(details.posterPath)",
                                                       imdbId: details.imdbId)
-                
+
                 self.view?.display(response)
 
             case .failure:

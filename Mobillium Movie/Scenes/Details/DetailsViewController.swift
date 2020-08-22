@@ -24,8 +24,9 @@ class DetailsViewControllerImpl: UIViewController {
 
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var overviewTextView: UITextView!
+    @IBOutlet var circularView: CircularProgressView!
     @IBOutlet var rateLabel: UILabel!
-    @IBOutlet var overviewLabel: UILabel!
 
     private var response: DetailsEntity.Response?
 
@@ -55,9 +56,11 @@ extension DetailsViewControllerImpl: DetailsViewController {
         self.response = response
         DispatchQueue.main.async {
             self.posterImageView.kf.setImage(with: URL(string: response.posterURL))
-            self.titleLabel.text = response.title
-            self.rateLabel.text = response.rate
-            self.overviewLabel.text = response.overview
+            self.titleLabel.text = response.title.uppercased()
+            self.overviewTextView.text = response.overview
+            self.rateLabel.text = "\(response.ratePercentage)"
+            self.circularView.fillBorder(response.rateValue)
+            self.circularView.strokeColor = response.rateColor
         }
     }
 }

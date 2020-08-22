@@ -15,6 +15,18 @@ protocol SearchViewController: class {
 class SearchViewControllerImpl: UIViewController {
     var presenter: SearchPresenter?
 
+    var searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.hidesNavigationBarDuringPresentation = false
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.searchBar.placeholder = "Search a movie"
+        controller.searchBar.sizeToFit()
+        controller.searchBar.becomeFirstResponder()
+
+        return controller
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -22,14 +34,14 @@ class SearchViewControllerImpl: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        localize()
+        searchController.searchBar.resignFirstResponder()
     }
-    
+
     private func setup() {
-        print(#function)
-    }
-    
-    private func localize() {
+        /// - Setting up search controller
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 }
 
@@ -38,3 +50,9 @@ class SearchViewControllerImpl: UIViewController {
 extension SearchViewControllerImpl: SearchViewController {
 }
 
+// MARK: - UISearchResultsUpdating
+
+extension SearchViewControllerImpl: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+    }
+}

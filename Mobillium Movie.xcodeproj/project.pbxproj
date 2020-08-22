@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56E2A6AD40220903AF1AC583 /* Pods_Mobillium_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F442784EBC9A736FCC2619A0 /* Pods_Mobillium_Movie.framework */; };
+		DB14DA7924F12C95003CA9E5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB14DA7824F12C95003CA9E5 /* CircularProgressView.swift */; };
 		DB39056B24EEFE2C001B8092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39056A24EEFE2C001B8092 /* AppDelegate.swift */; };
 		DB39057424EEFE2E001B8092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB39057324EEFE2E001B8092 /* Assets.xcassets */; };
 		DB39057724EEFE2E001B8092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB39057524EEFE2E001B8092 /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		B591624C09D5550F192DE0C9 /* Pods_Mobillium_MovieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_MovieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87332E6F2D9C2B245E2915C /* Pods_Mobillium_Movie_Mobillium_MovieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium_Movie_Mobillium_MovieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EBB19FBA609D4233A6E36E /* Pods-Mobillium Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium Movie.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium Movie/Pods-Mobillium Movie.debug.xcconfig"; sourceTree = "<group>"; };
+		DB14DA7824F12C95003CA9E5 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		DB39056724EEFE2C001B8092 /* Mobillium Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB39056A24EEFE2C001B8092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB39057324EEFE2E001B8092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */,
 				DBBE15A324EFD477004D5C52 /* APIHelper.swift */,
 				DB91CFBB24EFE59000D6C6FC /* CustomLayout.swift */,
+				DB14DA7824F12C95003CA9E5 /* CircularProgressView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				DBBE152B24EFBD66004D5C52 /* ListViewController.swift in Sources */,
 				DB91CFBC24EFE59000D6C6FC /* CustomLayout.swift in Sources */,
 				DB3905A724EF00C0001B8092 /* SearchEntity.swift in Sources */,
+				DB14DA7924F12C95003CA9E5 /* CircularProgressView.swift in Sources */,
 				DBBE153124EFBD7D004D5C52 /* ListAssembly.swift in Sources */,
 				DBBE159124EFCB77004D5C52 /* DetailsPresenter.swift in Sources */,
 				DBBE159324EFCB77004D5C52 /* DetailsViewController.swift in Sources */,
