@@ -22,6 +22,7 @@ struct Movies: Codable {
 
 struct MovieDetails: Codable {
     var title: String
+    var overview: String
     var popularity: Double
     var releaseDate: String
     var posterPath: String

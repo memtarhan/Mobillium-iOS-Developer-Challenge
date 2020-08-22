@@ -7,8 +7,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerImpl">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewControllerImpl" customModule="Mobillium_Movie" customModuleProvider="target">
             <connections>
+                <outlet property="overviewLabel" destination="Qum-yf-Ngg" id="kRL-dM-4oJ"/>
+                <outlet property="posterImageView" destination="uXG-5h-xdS" id="f0M-j9-2WL"/>
+                <outlet property="rateLabel" destination="3dj-9F-0Ul" id="KfI-Ud-8ir"/>
+                <outlet property="titleLabel" destination="5Yj-MZ-Pri" id="zPW-MP-MaS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,19 +21,52 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5MSDwUcqnGodFTvtlLiLKK0XKS" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-5h-xdS">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5MSDwUcqnGodFTvtlLiLKK0XKS" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-5h-xdS" userLabel="Poster">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48R-WC-KiK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="txF-Il-ncS">
+                            <rect key="frame" x="20" y="20" width="374" height="110"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-MZ-Pri" userLabel="Title">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-9F-0Ul" userLabel="Rate">
+                                    <rect key="frame" x="0.0" y="43" width="374" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Secret Garden" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-yf-Ngg" userLabel="Overview">
+                                    <rect key="frame" x="0.0" y="86" width="374" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-Qj-uG1">
+                            <rect key="frame" x="159" y="770" width="96" height="96"/>
+                            <state key="normal" image="icons8-imdb-96"/>
+                            <connections>
+                                <action selector="didTapIMDbButton:" destination="-1" eventType="touchUpInside" id="fH6-Be-meA"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="txF-Il-ncS" firstAttribute="leading" secondItem="48R-WC-KiK" secondAttribute="leading" constant="20" id="7Oo-F2-04y"/>
+                        <constraint firstAttribute="bottom" secondItem="PK2-Qj-uG1" secondAttribute="bottom" constant="30" id="7v1-pS-RCY"/>
+                        <constraint firstItem="txF-Il-ncS" firstAttribute="top" secondItem="48R-WC-KiK" secondAttribute="top" constant="20" id="FNJ-2C-DaT"/>
+                        <constraint firstAttribute="trailing" secondItem="txF-Il-ncS" secondAttribute="trailing" constant="20" id="Lk9-0e-hKF"/>
+                        <constraint firstItem="PK2-Qj-uG1" firstAttribute="centerX" secondItem="48R-WC-KiK" secondAttribute="centerX" id="n3P-kp-qn9"/>
+                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Secret Garden" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-9F-0Ul">
-                    <rect key="frame" x="8" y="30" width="398" height="43"/>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -39,11 +76,8 @@
                 <constraint firstItem="48R-WC-KiK" firstAttribute="bottom" secondItem="uXG-5h-xdS" secondAttribute="bottom" id="UeQ-IT-Lma"/>
                 <constraint firstAttribute="bottom" secondItem="uXG-5h-xdS" secondAttribute="bottom" id="YVg-qf-HSB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uXG-5h-xdS" secondAttribute="trailing" id="dii-bA-df4"/>
-                <constraint firstItem="3dj-9F-0Ul" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="fJH-b9-1K8"/>
                 <constraint firstItem="uXG-5h-xdS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j9j-PO-Qr5"/>
                 <constraint firstItem="48R-WC-KiK" firstAttribute="trailing" secondItem="uXG-5h-xdS" secondAttribute="trailing" id="kfJ-VR-vZY"/>
-                <constraint firstItem="3dj-9F-0Ul" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="spa-Ix-QsF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3dj-9F-0Ul" secondAttribute="trailing" constant="8" id="xTa-G0-nqr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
@@ -51,5 +85,6 @@
     </objects>
     <resources>
         <image name="5MSDwUcqnGodFTvtlLiLKK0XKS" width="2000" height="3000"/>
+        <image name="icons8-imdb-96" width="96" height="96"/>
     </resources>
 </document>

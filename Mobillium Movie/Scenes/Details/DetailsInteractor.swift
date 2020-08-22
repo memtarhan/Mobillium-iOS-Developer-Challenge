@@ -32,6 +32,7 @@ class DetailsInteractorImpl: DetailsInteractor {
 
                 do {
                     let details = try decoder.decode(MovieDetails.self, from: data)
+                    print(details)
                     completionHandler(.success(details))
 
                 } catch {

@@ -22,7 +22,6 @@ class ListInteractorImpl: ListInteractor {
 
     func retrieve(forList list: ListType, page: Int, _ completionHandler: @escaping (Result<[Movie], Error>) -> Void) {
         let url = "\(list.apiPrefix)api_key=\(APIHelper.key)&language=en-US&page=\(page)"
-        print(url)
         AF.request(url).responseData { response in
             switch response.result {
             case let .success(data):

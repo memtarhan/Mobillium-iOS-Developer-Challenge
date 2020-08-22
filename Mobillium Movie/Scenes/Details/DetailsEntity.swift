@@ -9,4 +9,11 @@
 import UIKit
 
 struct DetailsEntity {
+    struct Response {
+        let title: String
+        let rate: String
+        let overview: String
+        let posterURL: String
+        let imdbId: String
+    }
 }
