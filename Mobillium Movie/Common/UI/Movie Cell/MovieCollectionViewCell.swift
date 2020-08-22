@@ -11,7 +11,6 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet var coverImageView: UIImageView!
-    @IBOutlet var popularityLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
 
@@ -20,7 +19,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
             if let model = model {
                 let imageUrl = URL(string: model.imageUrl)
                 coverImageView.kf.setImage(with: imageUrl)
-                popularityLabel.text = model.popularity
                 titleLabel.text = model.title
                 releaseDateLabel.text = model.releaseDate
             }

@@ -21,6 +21,13 @@ struct ListEntity {
 enum ListType {
     case upcoming, nowPlaying
 
+    var title: String {
+        switch self {
+        case .upcoming: return "Upcoming"
+        case .nowPlaying: return "Now playing"
+        }
+    }
+
     var apiPrefix: String {
         switch self {
         case .upcoming: return "\(prefix)/upcoming?"

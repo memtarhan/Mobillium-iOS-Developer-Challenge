@@ -9,4 +9,11 @@
 import UIKit
 
 struct SearchEntity {
+    struct ViewModel {
+        var title: String
+        var popularity: String
+        var releaseDate: String
+        var imageUrl: String
+        var id: String
+    }
 }

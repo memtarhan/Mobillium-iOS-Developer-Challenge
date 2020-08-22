@@ -24,6 +24,8 @@ class ListViewControllerImpl: UIViewController {
 
     private var models: [ListEntity.ViewModel] = []
 
+    private var segmentedController = UISegmentedControl(items: [ListType.nowPlaying.title, ListType.upcoming.title])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -35,6 +37,13 @@ class ListViewControllerImpl: UIViewController {
 
     private func setup() {
         title = "Mobillium Movie"
+        
+        segmentedController.sizeToFit()
+        segmentedController.selectedSegmentTintColor = .systemOrange
+        segmentedController.selectedSegmentIndex = 0
+        segmentedController.addTarget(self, action: #selector(didChangeType), for: .allEvents)
+        
+        navigationItem.titleView = segmentedController
 
         /// - Setting up navigation bar's search button
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearch))
@@ -51,8 +60,8 @@ class ListViewControllerImpl: UIViewController {
         presenter?.present(forList: .nowPlaying, changedType: false)
     }
 
-    @IBAction func didChangeType(_ sender: UISegmentedControl) {
-        let list = sender.selectedSegmentIndex == 0 ? ListType.nowPlaying : .upcoming
+    @objc private func didChangeType() {
+        let list = segmentedController.selectedSegmentIndex == 0 ? ListType.nowPlaying : .upcoming
         models.removeAll()
         presenter?.present(forList: list, changedType: true)
     }

@@ -149,6 +149,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB14DA7A24F183CD003CA9E5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE159A24EFCDF9004D5C52 /* Movie Cell */,
+				DB91CFBB24EFE59000D6C6FC /* CustomLayout.swift */,
+				DB14DA7824F12C95003CA9E5 /* CircularProgressView.swift */,
+				DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DB14DA7B24F183E6003CA9E5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBBE15A324EFD477004D5C52 /* APIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DB39055E24EEFE2C001B8092 = {
 			isa = PBXGroup;
 			children = (
@@ -257,11 +276,9 @@
 		DB3905B324EF01D7001B8092 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DB14DA7B24F183E6003CA9E5 /* Helpers */,
+				DB14DA7A24F183CD003CA9E5 /* UI */,
 				DB39056A24EEFE2C001B8092 /* AppDelegate.swift */,
-				DB3905AE24EF00FA001B8092 /* ViewControllerFactory.swift */,
-				DBBE15A324EFD477004D5C52 /* APIHelper.swift */,
-				DB91CFBB24EFE59000D6C6FC /* CustomLayout.swift */,
-				DB14DA7824F12C95003CA9E5 /* CircularProgressView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -269,7 +286,6 @@
 		DBBE152124EFBD38004D5C52 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				DBBE159A24EFCDF9004D5C52 /* Movie Cell */,
 				DBBE152624EFBD66004D5C52 /* ListEntity.swift */,
 				DBBE152524EFBD66004D5C52 /* ListInteractor.swift */,
 				DBBE152224EFBD66004D5C52 /* ListPresenter.swift */,

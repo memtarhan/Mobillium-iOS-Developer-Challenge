@@ -13,4 +13,5 @@ struct APIHelper {
     static let imagePath = "https://image.tmdb.org/t/p/original"
     static let moviePath = "https://api.themoviedb.org/3/movie/"
     static let imdbPath = "https://www.imdb.com/title/"
+    static let searchPath = "https://api.themoviedb.org/3/search/movie?"
 }
